@@ -22,8 +22,9 @@ Steps
 
 
 With docker-compose.yml
-
-1. docker-compose up
+Create the Docker Image:
+1. docker build -t pdfsummary .
+2. docker-compose up
 
 
 
