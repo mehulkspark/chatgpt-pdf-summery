@@ -52,6 +52,7 @@
   <li>Create Image and start containers defined in docker-compose.yml:</li>
 </ol>
 <code>1. docker build -t pdfsummary .</code>
+<hr/>
 <code>2. docker-compose up</code>
 
 <p>By following these steps, you'll be ready to generate PDF summaries with ease using Docker containers. Happy summarizing! 📑</p>
