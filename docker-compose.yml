@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  pdf_summary:
+    build: .
+    container_name: my_pdf_summary_container
+    volumes:
+      - ./OpenAI:/app/OpenAI
+      - ./pdfs:/app/pdfs
