@@ -9,8 +9,11 @@ Build Docker Image
 1. Create Docker Image 
 docker build -t pdfsummery .
 
+rebuild 
+docker build -t <image_name> . --no-cache
+
 2. Create Container from Image 
-docker run --name my_pdf_summary_container pdfsummary
+docker run --name my_pdf_summary_container3.6 pdfsummary3.6
 
 3. Inside Container Run Code 
 
@@ -27,4 +30,9 @@ Create the Docker Image:
 2. docker-compose up
 
 
+Remove All Image
+docker rmi -f $(docker images -a -q)
+
+Remove All Container
+docker rm -f $(docker ps -a -q)
 

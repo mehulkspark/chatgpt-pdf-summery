@@ -1,0 +1,4 @@
+PyPDF2
+langchain
+# If using the azure-chat-openai package, add it here
+# azure-chat-openai

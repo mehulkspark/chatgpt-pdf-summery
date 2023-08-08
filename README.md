@@ -21,6 +21,9 @@
 </ol>
 <code>docker build -t pdfsummary .</code>
 
+<h2>rebuild</h2> 
+<code>docker build -t pdfsummary . --no-cache</code>
+
 <ol start="2">
   <li>Create a Container from the Image:</li>
 </ol>
