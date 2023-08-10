@@ -1,0 +1,52 @@
+1. Create the Lambda Handler:
+Create a file named Summarize_PDF_Chroma.py 
+This is the entry point for your Lambda function. 
+handler function accepts two arguments: event and context
+
+Package Your Code:
+Now you need to package your code and dependencies into a 
+ZIP archive for Lambda deployment. Here's a step-by-step process:
+
+project/
+|-- Summarize_PDF_Chroma.py
+|-- OpenAI/
+|-- pdfs/
+|-- requirements.txt
+|-- ... (other files)
+
+# Create a temporary directory
+mkdir temp
+
+# Copy your code and dependencies to the temporary directory
+cp Summarize_PDF_Chroma.py temp/
+cp -r OpenAI temp/
+cp -r pdfs temp/
+cp requirements.txt temp/
+
+# Change to the temporary directory
+cd temp
+
+# Install dependencies into the current directory
+pip install -r requirements.txt -t .
+
+# Create the Lambda deployment package
+zip -r lambda_package.zip .
+
+# Move the package back to the project directory
+mv lambda_package.zip ..
+
+# Clean up the temporary directory
+cd ..
+rm -r temp
+
+
+1. Create an AWS Lambda Function:
+Finally, you can create an AWS Lambda function using the AWS Management Console, 
+AWS CLI, or an infrastructure-as-code tool like AWS CloudFormation or AWS CDK. 
+When creating the Lambda function, upload the lambda_package.zip file as the 
+deployment package.
+
+Please note that this process might require further adjustments based 
+on your specific requirements and the nature of your application. 
+It's also important to ensure that your code is properly 
+structured and compatible with AWS Lambda's execution environment.
